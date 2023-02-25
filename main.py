@@ -21,15 +21,15 @@ class WindowManager(ScreenManager):
 class MainScreen(Screen):
     pass
 
-class MyApp(MDApp):
-    def __init__(self, **kwargs) -> None:
+class MainApp(MDApp):
+    def __init__(self, **kwargs):
         self.title="Battery Status"
         super().__init__(**kwargs)
     
     def build(self):
         self.wm = WindowManager()
         self.theme_cls.theme_style = 'Light'
-        self.theme_cls.primary_palete = 'Teal'
+        self.theme_cls.primary_palete = 'Red'
         screens = [
             MainScreen(name='main'),
         ]
@@ -38,4 +38,4 @@ class MyApp(MDApp):
         return self.wm
 
 if __name__=="__main__":
-    MyApp().run()
+    MainApp().run()
